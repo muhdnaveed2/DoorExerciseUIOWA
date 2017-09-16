@@ -1,0 +1,31 @@
+﻿@model IEnumerable<DoorExerciseUIOWA.Models.DoorModel>
+
+@{
+    ViewBag.Title = "Door Passing";
+}
+
+<h2>Door List</h2>
+
+<table class="table">
+    <tr>
+        <th>Door Number</th>
+        <th>Door State</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        if (@item.State == DoorExerciseUIOWA.Models.State.Open)
+        {
+            <tr>
+                <td>
+                    @item.ID
+                </td>
+                <td>
+                    @item.State
+                    <img src="@Url.Content("~/Images/Open.png")" alt="Open Door" style="width:20px; height:20px;" />
+                </td>
+            </tr>
+         }
+     }
+
+</table>
