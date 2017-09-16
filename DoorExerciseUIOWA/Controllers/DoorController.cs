@@ -12,7 +12,7 @@ namespace DoorExerciseUIOWA.Controllers
         const int _DOOR = 100;
         const int _PASS = 100;
 
-        // GET: Door
+        // GET: Index
         public ActionResult Index()
         {
             List<DoorModel> doorList = new List<DoorModel>(_DOOR);
@@ -25,7 +25,7 @@ namespace DoorExerciseUIOWA.Controllers
             }
 
             // Passing through doors 100 times
-            for (int pass = 1; pass <= _PASS; pass++)
+            for (int pass = 0; pass <= _PASS; pass++)
             {
                 for (int i = pass; i < doorList.Capacity; i += pass)
                 { 
