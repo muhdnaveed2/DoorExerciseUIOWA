@@ -25,11 +25,11 @@ namespace DoorExerciseUIOWA.Controllers
             }
 
             // Passing through doors 100 times
-            for (int pass = 0; pass <= _PASS; pass++)
+            for (int pass = 1; pass <= _PASS; pass++)
             {
-                for (int i = pass; i < doorList.Capacity; i += pass)
-                { 
-                   doorList[i-1].State = doorList[i-1].State == State.Open ? State.Close : State.Open;
+                for (int i = pass; i <= doorList.Capacity; i += pass)
+                {
+                    doorList[i-1].State = doorList[i-1].State == State.Open ? State.Close : State.Open;
                 }
             }
             return View("Door", doorList);
