@@ -10,7 +10,7 @@ namespace DoorExerciseUIOWA.Controllers
     public class DoorController : Controller
     {
         const int _DOOR = 100;
-        const int _PASS = 3;
+        const int _PASS = 100;
 
         // GET: Door
         public ActionResult Index()
